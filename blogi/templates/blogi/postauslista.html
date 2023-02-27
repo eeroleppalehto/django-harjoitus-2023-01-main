@@ -1,0 +1,9 @@
+{% extends 'blogi/base.html' %}
+{% block content %}
+    <h1>Postaukset</h1>
+    <ul>
+    {% for postaus in postaukset %}
+    <li><a href="{%url 'nayta_postaus' postaus.id %}">{{postaus}}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}
