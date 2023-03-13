@@ -14,7 +14,7 @@ def main():
     password=os.environ['ADMIN_USER_PASSWORD']
 
     print(f"Creating superuser, {username!r}")
-    get_user_model.objects.create_superuser(username, email, password)
+    get_user_model().objects.create_superuser(username, email, password)
 
 if __name__ == '__main__':
     main()
